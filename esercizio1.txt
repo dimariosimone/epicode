@@ -1,0 +1,54 @@
+1)	Creare una statistica / report che indichi la fascia oraria nella quale si sono ricevute mail di spam
+	[1° dataset strutturato]
+	Si esegue un export della casella di posta,
+	avremmo il seguente dataset (sintetizzato) ipotizziamo .excel o .txt :
+
+	mittente		destinatario		data e ora		oggetto			spam
+	email			email			date			text			true/false
+	dato semistrutturato	dato semistrutturato	dato strutturato	dato non strutturato	dato strutturato
+
+	Successivamente si creerà una query di creazione tabella con origine dati il file sopra esportato, filtrando solo i record spam=true, inserendo un campo numerico con numerazione progressiva indicizzato che chiamremo ID e a cui assegneremo la chiave primaria.
+	Successivamente si creerà una query di somma o riepilogo con origine dati la tabella sopra creata, con la seguente struttura:
+
+	ID			data e ora
+	conteggio		raggruppa
+
+	Successivamente creeremo un report contenente un grafico a linee con origine dati la query sopra creata che abbia nella quale l'asse verticale il conteggio degli ID e nell'asse verticale il campo data e ora.
+
+2)	Creare tabella contatti facebook
+	[2° dataset strutturato]
+	Si esportano i contatti in un file txt, avremmo il seguente dataset (sintetizzato):
+	
+	nickname		nome			cognome			data iscrizione		amico dal		contatto
+	text			text			text			date			date			email	
+	dato non strutturato	dato non strutturato	dato non strutturato	dato strutturato	dato non strutturato	dato semistrutturato
+
+	In questo caso potremmo assegnare l'identificativo univoco con il nickname essendo un campo presuribilmente non ripetibile.
+
+3)	Creare tabella chiamate effettuate
+	[3° dataset strutturato]
+	Si esportano le chiamate effettuate in un file txt, avremmo il seguente dataset (sintetizzato):
+	
+	contatto		recapito		data e ora chiamata
+	txt			numerico		date
+	dato non strutturato	dato non strutturato	dato strutturato
+	
+	In questo caso potremmo assegnare l'identificativo univoco con la coppia di campi contatto e recapito.
+
+4)	Creare tabella dati video youtube
+	[1° dataset non strutturato]
+	Dopo aver scaricato i file video potremmo ricavare il seguente dataset:
+
+	nome			data creazione		durata
+	dato non strutturato	dato strutturato	dato strutturato
+	
+	Per questo dataset potremmo assegnare l'identificativo nel insieme dei 3 campi.
+
+5)	Creare tabella dati audio youtube
+	[2° dataset non strutturato]		
+	Dopo aver scaricato i file audio potremmo ricavare il seguente dataset:
+
+	nome			data creazione		durata
+	dato non strutturato	dato strutturato	dato strutturato
+	
+	Per questo dataset potremmo assegnare l'identificativo nel insieme dei 3 campi.
