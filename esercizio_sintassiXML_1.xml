@@ -1,0 +1,53 @@
+<libro>
+	<titolo>
+Le avventure di Alice nel Paese delle Meraviglie
+    </titolo>
+	<data_pubblicazione>1865</data_pubblicazione>
+	<genere>Romanzo</genere>
+	<sottogenere>Fantastico</sottogenere>
+	<lingua_originale>Inglese</lingua_originale>
+	<autore>
+		<nome>Lewis Carroll</nome>
+		<indirizzo>
+            Daresbury, Regno Unito
+        </indirizzo>
+	</autore>
+	<capitoli>
+		<capitolo_1>
+            Nella tana del coniglio
+        </capitolo_1>
+		<capitolo_2>
+            Uno stagno di Lacrime
+        </capitolo_2>
+		<capitolo_3>
+            Una corsa elettorale e una lunga storia
+        </capitolo_3>
+		<capitolo_4>
+            Il coniglio presenta un conticino
+        </capitolo_4>
+		<capitolo_5>
+            I Consigli di un Bruco
+        </capitolo_5>
+		<capitolo_6>
+            Porco e pepe
+        </capitolo_6>
+		<capitolo_7>
+            Un tè di matti
+        </capitolo_7>
+		<capitolo_8>
+            La partita a croquet della Regina
+        </capitolo_8>
+		<capitolo_9>
+            La Storia della Finta Tartaruga
+        </capitolo_9>
+		<capitolo_10>
+            La Quadriglia delle Aragoste
+        </capitolo_10>
+		<capitolo_11>
+            Chi ha rubato le paste?
+        </capitolo_11>
+		<capitolo_12>
+            La deposizione di Alice
+        </capitolo_12>
+	</capitoli>
+</libro>
