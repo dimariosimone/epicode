@@ -1,0 +1,42 @@
+1.
+
+SELECT Aereoporto.Citta
+FROM Aereoporto
+WHERE (((Aereoporto.Numpiste) Is Null));
+
+__________________________________________
+
+2.
+
+SELECT Volo.TipoAereo
+FROM Volo
+WHERE (((Volo.CittaPart) Like "Torino"));
+
+__________________________________________
+
+3.
+
+SELECT Volo.CittaPart
+FROM Volo
+WHERE (((Volo.CittaArr) Like "Bologna"));
+
+__________________________________________
+
+4.
+
+SELECT Volo.CittaPart, Volo.CittaArr
+FROM Volo
+WHERE (((Volo.IdVolo) Like "AZ274"));
+
+__________________________________________
+
+5.
+
+SELECT Volo.TipoAereo, Volo.GiornoSettimana, Volo.OraPart
+FROM Volo
+WHERE (((Volo.CittaPart) Like "B*" And (Volo.CittaPart) Like "*o*") AND ((Volo.CittaArr) Like "*A" And (Volo.CittaArr) Like "*e*"));
+
+__________________________________________
+
+6.
+
