@@ -1,0 +1,36 @@
+1.
+
+SELECT AUTORE.Nome AS Cantautore
+FROM (CANTANTE INNER JOIN ESECUZIONE ON CANTANTE.CodiceReg = ESECUZIONE.CodiceReg) INNER JOIN AUTORE ON (AUTORE.Nome = CANTANTE.NomeCantante) AND (ESECUZIONE.TitoloCanz = AUTORE.TitoloCanzone)
+WHERE (((AUTORE.Nome) Like "D*"));
+
+----------------------------------------------------------------------------------
+
+2.
+
+SELECT DISCO.TitoloAlbum AS [Titolo Disco], ESECUZIONE.Anno
+FROM (CONTIENE INNER JOIN DISCO ON CONTIENE.NroSerieDisco = DISCO.NroSerie) INNER JOIN ESECUZIONE ON CONTIENE.CodiceReg = ESECUZIONE.CodiceReg
+WHERE (((ESECUZIONE.Anno) Is Null));
+
+----------------------------------------------------------------------------------
+
+3.
+
+SELECT CANTANTE.NomeCantante
+FROM (CONTIENE INNER JOIN DISCO ON CONTIENE.NroSerieDisco = DISCO.NroSerie) INNER JOIN CANTANTE ON CONTIENE.CodiceReg = CANTANTE.CodiceReg;
+
+----------------------------------------------------------------------------------
+
+4.
+
+SELECT STUDENTE.Nome, ESAME.Codice AS [Codice Esame], ESAME.Voto, STUDENTE.Matricola AS [Matricola Studente], CORSO.Nome AS Docente
+FROM (CORSO INNER JOIN (ESAME INNER JOIN STUDENTE ON ESAME.MatricolaStudente = STUDENTE.Matricola) ON CORSO.Codice = ESAME.Codice) INNER JOIN DOCENTE ON CORSO.MatricolaDocente = DOCENTE.Matricola
+WHERE (((ESAME.Voto)>28));
+
+---------------------------------------------------------------------------------
+
+5.
+
+SELECT DOCENTE.Nome AS Docente, CORSO.Nome AS Corso, ESAME.SettoreScientifico
+FROM ESAME INNER JOIN (CORSO INNER JOIN DOCENTE ON CORSO.MatricolaDocente = DOCENTE.Matricola) ON ESAME.Codice = CORSO.Codice;
+
